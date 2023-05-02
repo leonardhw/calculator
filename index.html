@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="h-screen w-screen flex bg-slate-400">
+  <div class="max-w-[60%] max-h-[50%] bg-[#1e2023] flex flex-col mx-auto h-full my-auto rounded-2xl shadow-2xl">
+    <!-- Display -->
+    <div class="p-4 h-1/4">
+      <div class="h-full flex flex-col justify-end items-end p-6">
+        <span id="screenfull" type="text"
+          class="w-full h-full flex flex-end justify-end items-end text-xl text-[#8d8d8d] bg-[#1e2023] text-right"></span>
+        <span id="screen" type="text"
+          class="w-full h-full flex flex-end justify-end items-end text-4xl text-white bg-[#1e2023] text-right"></span>
+      </div>
+    </div>
+
+    <!-- Keys -->
+    <div id="keys" class="p-4 flex-1 grid grid-rows-5 grid-flow-col gap-2" id="keys">
+      <button type="button" id="plus"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-50">
+        +
+      </button>
+      <button type="button" id="7"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-50">
+        7
+      </button>
+      <button type="button" id="4"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-90">
+        4
+      </button>
+      <button type="button" id="1"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-90">
+        1
+      </button>
+      <button type="button" id="0"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-50">
+        0
+      </button>
+      <button type="button" id="-"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-90">
+        -
+      </button>
+      <button type="button" id="8"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-90">
+        8
+      </button>
+      <button type="button" id="5"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-90">
+        5
+      </button>
+      <button type="button" id="2"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-50">
+        2
+      </button>
+      <button type="button"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-90">
+        .
+      </button>
+      <button type="button" id="multiply"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-90">
+        X
+      </button>
+      <button type="button" id="9"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-90">
+        9
+      </button>
+      <button type="button" id="6"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-50">
+        6
+      </button>
+      <button type="button" id="3"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-90">
+        3
+      </button>
+      <button type="button" id="C"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-90">
+        C
+      </button>
+      <button type="button" id="divide"
+        class="bg-[#3a3c3f] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-90">
+        /
+      </button>
+      <button type="button" id="equals"
+        class="row-span-4 bg-[#dd765e] rounded-md flex justify-center items-center text-white text-xl h-full w-full min-h-[64px] min-w-[80px] hover:opacity-90">
+        =
+      </button>
+    </div>
+  </div>
+  </div>
+
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
